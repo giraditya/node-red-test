@@ -28,10 +28,76 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
+        "x": 120,
         "y": 80,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "d1c99aca2dea3b4a",
+        "type": "debug",
+        "z": "b3e1ad73c10eddf0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "test",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ccb00d9cfb3af973",
+        "type": "complete",
+        "z": "b3e1ad73c10eddf0",
+        "name": "",
+        "scope": [
+            "27191f7c2213a87b"
+        ],
+        "uncaught": false,
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "ba657c7a16b470a7"
+            ]
+        ]
+    },
+    {
+        "id": "f9d2cc83547bf8e8",
+        "type": "catch",
+        "z": "b3e1ad73c10eddf0",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 280,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba657c7a16b470a7",
+        "type": "function",
+        "z": "b3e1ad73c10eddf0",
+        "name": "hello world",
+        "func": "msg.test = 'world';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 80,
+        "wires": [
+            [
+                "d1c99aca2dea3b4a"
+            ]
         ]
     }
 ]
